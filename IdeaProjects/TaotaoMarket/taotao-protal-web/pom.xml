@@ -1,18 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>taotao-parent</artifactId>
         <groupId>com.waitsober</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../taotao-parent/pom.xml</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>taotao-web</artifactId>
     <packaging>war</packaging>
-    <name>taotao-web Maven Webapp</name>
-    <url>http://maven.apache.org</url>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>taotao-protal-web</artifactId>
+
     <dependencies>
-        <dependency>
+
+    <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
@@ -65,9 +67,10 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
-        <dependency>
 
-            <!--soa架构的服务调度工具 -->
+
+    <!--soa架构的服务调度工具 -->
+    <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
         </dependency>
@@ -83,45 +86,31 @@
         </dependency>
         <dependency>
             <groupId>com.waitsober</groupId>
-            <artifactId>taotao-manager-interface</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.waitsober</groupId>
             <artifactId>taotao-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!--fastDFS依赖-->
-        <dependency>
-            <groupId>fastdfs_client</groupId>
-            <artifactId>fastdfs_client</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
 
-
-        <!--fileupload-->
-        <!-- 文件上传组件 -->
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <port>8080</port>
+                    <port>8082</port>
                     <path>/</path>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+
+
+
 </project>

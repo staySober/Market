@@ -19,6 +19,9 @@ Date.prototype.format = function(format){
     return format; 
 };
 
+
+
+
 var TT = TAOTAO = {
 	// 编辑器参数
 	kingEditorParams : {
@@ -101,8 +104,11 @@ var TT = TAOTAO = {
         	});
     	});
     },
-    
-    // 初始化选择类目组件
+
+
+
+
+// 初始化选择类目组件
     initItemCat : function(data){
     	$(".selectItemCat").each(function(i,e){
     		var _ele = $(e);
